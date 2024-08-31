@@ -1,9 +1,6 @@
 package lk.ijse.aad.springwebmvc.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("mapping")
@@ -13,9 +10,14 @@ public class Mapping {
         return "Hello World";
     }
 
-    @GetMapping("postget/*")
+    @GetMapping("postget/**")
     public String getHello(){
         return "Hello World get";
+    }
+
+    @PostMapping("/{name}/{name1}")
+    public String mappingpost(@PathVariable ("name") String myname , @PathVariable ("name1") String surname) {
+        return "Hello World post " + myname + " lastname " + surname;
     }
 
 
