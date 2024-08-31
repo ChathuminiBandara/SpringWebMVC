@@ -20,5 +20,9 @@ public class Mapping {
         return "Hello World post " + myname + " lastname " + surname;
     }
 
+    @PostMapping("/{id:s\\d{4}}")
+    public String newmapping(@PathVariable ("id") String id) {
+        return "digits between s & d " + id ;
+    }
 
 }
