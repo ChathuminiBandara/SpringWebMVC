@@ -6,6 +6,6 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 @Configuration
 @ComponentScan(basePackages = "lk.ijse.aad.springwebmvc")
-@EnableWebMvc
+@EnableWebMvc //presenttaion layer eke ekata withara dannae
 public class WebAppConfig {
 }
